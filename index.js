@@ -9,7 +9,9 @@ const displayPopUpMsg = document.querySelector(".js-display-msg");
 const numberOne = Math.floor(Math.random() * 10);
 const numberTwo = Math.floor(Math.random() * 10);
 
-const score = JSON.parse(localStorage.getItem("scoreTable")) || { rightAnswer : 0 };
+const score = JSON.parse(localStorage.getItem("scoreTable")) || {
+  rightAnswer: 0,
+};
 
 const multiplicationValue = numberOne * numberTwo;
 displayTabelValues.innerHTML = `${numberOne} X ${numberTwo} =  ? `;
