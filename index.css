@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9fd3c7;
+  padding: 20px;
+}
+
+/* Container Styling */
+.elements-container {
+  background-color: #385170;
+  padding: 30px 20px 20px 20px;
+  border-radius: 20px;
+  box-shadow: 2px 15px 16px 10px rgba(1.1, 1, 1, 0.1);
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  color: white;
+}
+
+/* Score Display - Top Right */
+.js-display-score {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-weight: bold;
+  color: black;
+  border: 1px lightgray solid;
+  padding: 10px;
+  border-radius: 100px;
+  background-color: #dde0ab;
+}
+
+/* Table Display */
+.js-display-tables {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: antiquewhite;
+  text-align: center;
+}
+
+/* Input Styling */
+.js-input-answer {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.js-input-answer:focus {
+  outline: none;
+}
+
+/* Button Styling */
+.js-subnit-button,
+.js-next-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.js-subnit-button:hover,
+.js-next-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 480px) {
+  .elements-container {
+    padding: 20px 15px;
+  }
+
+  .js-input-answer,
+  .js-subnit-button,
+  .js-next-button {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+.display-score {
+  color: red;
+}
+.popup-bar {
+  position: fixed;
+  bottom: -100px;
+  left: 0;
+  right: 0;
+  background-color: #1e293b;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.5s forwards;
+  z-index: 1000;
+  font-size: 16px;
+  text-align: center;
+  visibility: hidden;
+}
+.show-pop-up-noti {
+  visibility: visible;
+}
+
+
+
+@keyframes slideUp {
+  to {
+    bottom: 0;
+  }
+}
+
+.hide {
+  animation: slideDown 0.4s forwards;
+}
+
+@keyframes slideDown {
+  to {
+    bottom: -100px;
+  }
+}
